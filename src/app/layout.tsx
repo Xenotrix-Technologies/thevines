@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "THE VINES ROOMS",
     images: [
       {
-        url: "https://d2gx18f76jq9dw.cloudfront.net/13124/01JR0Z520PTM0FF5TE72P145EV.jpg",
+        url: "/images/01JR0Z520PTM0FF5TE72P145EV.jpg",
         width: 1200,
         height: 800,
         alt: "THE VINES ROOMS Property Facade and Entrance",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "THE VINES ROOMS | Premium Hotel in Thiruvilwamala, Kerala",
     description: "A calm stay, a better experience near Punarjani Gardens. Enquire via WhatsApp.",
-    images: ["https://d2gx18f76jq9dw.cloudfront.net/13124/01JR0Z520PTM0FF5TE72P145EV.jpg"],
+    images: ["/images/01JR0Z520PTM0FF5TE72P145EV.jpg"],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "https://d2gx18f76jq9dw.cloudfront.net/80738/generated-favicon-019e7b2e-065d-73cb-bc68-7c40255107be.svg",
+    icon: "/images/generated-favicon-019e7b2e-065d-73cb-bc68-7c40255107be.svg",
   },
 };
 
@@ -88,7 +88,7 @@ export default function RootLayout({
         "url": "https://thevinesrooms.com/",
         "description":
           "The Vines Rooms offers a peaceful and comfortable retreat in the heart of Kerala, located at Thiruvilwamala, near Punarjani Gardens. Featuring Standard Double, Premium, and Executive Rooms with modern amenities.",
-        "image": "https://d2gx18f76jq9dw.cloudfront.net/13124/01JR0Z520PTM0FF5TE72P145EV.jpg",
+        "image": "/images/01JR0Z520PTM0FF5TE72P145EV.jpg",
         "telephone": HOTEL_CONFIG.contact.primaryPhone,
         "email": HOTEL_CONFIG.contact.email,
         "address": {

@@ -318,7 +318,7 @@ export default function WhatsAppBookingModal() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-neutral-900 text-white text-xs uppercase tracking-widest font-medium hover:bg-black transition-all disabled:opacity-50 group"
+              className="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-all disabled:opacity-50 group"
             >
               <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
               <span>Continue to WhatsApp</span>

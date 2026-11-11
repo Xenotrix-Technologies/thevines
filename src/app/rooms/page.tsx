@@ -61,17 +61,17 @@ export default function RoomsPage() {
           <div className="overflow-x-auto border border-neutral-200 bg-white shadow-xs">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
-                <tr className="bg-neutral-950 text-white">
-                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-neutral-800 w-1/4">
+                <tr className="bg-[#383838] text-white">
+                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-[#4a4a4a] w-1/4">
                     Feature / Facility
                   </th>
-                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-neutral-800 text-center w-1/4">
+                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-[#4a4a4a] text-center w-1/4">
                     Standard Double Room
                   </th>
-                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-neutral-800 text-center w-1/4 bg-neutral-900">
+                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-[#4a4a4a] text-center w-1/4 bg-[#2d2d2d]">
                     Premium Room
                   </th>
-                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-neutral-800 text-center w-1/4">
+                  <th className="p-4 uppercase tracking-widest font-semibold border-b border-[#4a4a4a] text-center w-1/4">
                     Executive Room
                   </th>
                 </tr>
@@ -136,7 +136,7 @@ export default function RoomsPage() {
                   <td className="p-4 text-center">
                     <button
                       onClick={() => openBooking("Standard Double Room")}
-                      className="px-3 py-1.5 bg-neutral-900 text-white uppercase tracking-wider text-[10px] font-medium hover:bg-black"
+                      className="px-3 py-1.5 bg-[#383838] text-white uppercase tracking-wider text-[10px] font-medium hover:bg-[#484848]"
                     >
                       Enquire
                     </button>
@@ -144,7 +144,7 @@ export default function RoomsPage() {
                   <td className="p-4 text-center bg-neutral-50/50">
                     <button
                       onClick={() => openBooking("Premium Room")}
-                      className="px-3 py-1.5 bg-neutral-900 text-white uppercase tracking-wider text-[10px] font-medium hover:bg-black"
+                      className="px-3 py-1.5 bg-[#383838] text-white uppercase tracking-wider text-[10px] font-medium hover:bg-[#484848]"
                     >
                       Enquire
                     </button>
@@ -152,7 +152,7 @@ export default function RoomsPage() {
                   <td className="p-4 text-center">
                     <button
                       onClick={() => openBooking("Executive Room")}
-                      className="px-3 py-1.5 bg-neutral-900 text-white uppercase tracking-wider text-[10px] font-medium hover:bg-black"
+                      className="px-3 py-1.5 bg-[#383838] text-white uppercase tracking-wider text-[10px] font-medium hover:bg-[#484848]"
                     >
                       Enquire
                     </button>

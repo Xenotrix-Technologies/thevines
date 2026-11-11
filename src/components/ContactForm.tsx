@@ -119,7 +119,7 @@ export default function ContactForm() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 text-xs uppercase tracking-wider bg-neutral-900 text-white font-medium hover:bg-black transition-colors flex items-center justify-center gap-2"
+              className="px-5 py-2.5 text-xs uppercase tracking-wider bg-[#383838] text-white font-medium hover:bg-[#484848] transition-colors flex items-center justify-center gap-2"
             >
               <span>Instant Follow-Up on WhatsApp</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -237,7 +237,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-neutral-950 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-800 transition-colors disabled:opacity-60"
+              className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors disabled:opacity-60"
             >
               {status === "submitting" ? (
                 <>

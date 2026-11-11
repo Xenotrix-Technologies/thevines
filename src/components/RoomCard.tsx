@@ -73,7 +73,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
           {/* Main Room Photos Slider (7 cols) */}
-          <div className="lg:col-span-7 relative bg-neutral-900 group min-h-[360px] sm:min-h-[460px]">
+          <div className="lg:col-span-7 relative bg-[#383838] group min-h-[360px] sm:min-h-[460px]">
             <Image
               src={room.images[activeImageIndex]?.url || room.coverImage}
               alt={room.images[activeImageIndex]?.alt || room.name}
@@ -196,7 +196,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
                 <div className="flex items-center gap-2.5">
                   <button
                     onClick={() => openBooking(room.name)}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 bg-neutral-950 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-800 transition-colors shadow-sm group"
+                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors shadow-sm group"
                   >
                     <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
                     <span>Enquire on WhatsApp</span>
@@ -214,7 +214,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
   return (
     <article className="group bg-white border border-neutral-200 overflow-hidden flex flex-col justify-between hover-lift">
       {/* Room Image */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+      <div className="relative aspect-[16/10] overflow-hidden bg-[#383838]">
         <Image
           src={room.coverImage}
           alt={room.name}
@@ -275,7 +275,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
           </Link>
           <button
             onClick={() => openBooking(room.name)}
-            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 text-xs uppercase tracking-wider bg-neutral-950 text-white hover:bg-neutral-800 transition-colors text-center font-medium shadow-xs group"
+            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 text-xs uppercase tracking-wider bg-[#383838] text-white hover:bg-[#484848] transition-colors text-center font-medium shadow-xs group"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] group-hover:scale-110 transition-transform" />
             <span>Book Room</span>

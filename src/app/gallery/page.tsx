@@ -54,7 +54,7 @@ export default function GalleryPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 text-xs uppercase tracking-widest transition-all ${
                   isActive
-                    ? "bg-neutral-950 text-white font-semibold shadow-xs"
+                    ? "bg-[#383838] text-white font-semibold shadow-xs"
                     : "bg-neutral-50 text-neutral-600 hover:text-neutral-950 hover:bg-neutral-100 border border-neutral-200"
                 }`}
               >
@@ -73,7 +73,7 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => openLightboxAtIndex(index)}
-              className="group relative bg-neutral-900 border border-neutral-200 overflow-hidden cursor-pointer hover-lift"
+              className="group relative bg-[#383838] border border-neutral-200 overflow-hidden cursor-pointer hover-lift"
             >
               {/* Image container */}
               <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -131,7 +131,7 @@ export default function GalleryPage() {
           <div className="flex gap-3 w-full md:w-auto">
             <button
               onClick={() => openBooking()}
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-neutral-950 text-white text-xs uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors group"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-semibold hover:bg-[#484848] transition-colors group"
             >
               <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
               <span>Enquire on WhatsApp</span>

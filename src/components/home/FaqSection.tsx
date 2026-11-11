@@ -68,7 +68,7 @@ export default function FaqSection() {
             href={getGeneralWhatsAppUrl("I have a quick query before reserving a room.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-950 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-800 transition-colors whitespace-nowrap group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors whitespace-nowrap group"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] group-hover:scale-110 transition-transform" />
             <span>Ask on WhatsApp</span>

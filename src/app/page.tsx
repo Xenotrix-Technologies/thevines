@@ -66,11 +66,11 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 1. HERO SECTION                                              */}
       {/* ============================================================ */}
-      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center bg-neutral-950 text-white overflow-hidden">
+      <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center bg-[#383838] text-white overflow-hidden">
         {/* Immersive background photograph with parallax feel */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://d2gx18f76jq9dw.cloudfront.net/13124/01JR0Z520PTM0FF5TE72P145EV.jpg"
+            src="/images/01JR0Z520PTM0FF5TE72P145EV.jpg"
             alt="THE VINES ROOMS Property Exterior and Front Driveway"
             fill
             sizes="100vw"
@@ -78,7 +78,7 @@ export default function HomePage() {
             className="object-cover object-center scale-105 animate-pulse duration-[12000ms] opacity-60"
           />
           {/* Subtle gradient vignette */}
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#383838] via-[#383838]/70 to-[#383838]/30" />
         </div>
 
         {/* Hero Content */}
@@ -153,7 +153,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/3] w-full bg-neutral-100 overflow-hidden border border-neutral-200 shadow-md">
                 <Image
-                  src="https://d2gx18f76jq9dw.cloudfront.net/12515/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
+                  src="/images/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
                   alt="The Vines Rooms Courtyard and Garden Path"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -164,7 +164,7 @@ export default function HomePage() {
               {/* Inset Secondary Image */}
               <div className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-[4/3] bg-neutral-200 border-4 border-white shadow-xl overflow-hidden">
                 <Image
-                  src="https://d2gx18f76jq9dw.cloudfront.net/12519/01JQDD9YE366SE95M9DB6RJBZH.jpeg"
+                  src="/images/01JQDD9YE366SE95M9DB6RJBZH.jpeg"
                   alt="The Vines Rooms Architecture and Green Surroundings"
                   fill
                   sizes="25vw"
@@ -309,7 +309,7 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 5. GALLERY PREVIEW                                           */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-28 bg-neutral-950 text-white">
+      <section className="py-20 sm:py-28 bg-[#383838] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Visual Gallery"
@@ -324,7 +324,7 @@ export default function HomePage() {
               <Link
                 key={item.id}
                 href="/gallery"
-                className={`group relative overflow-hidden bg-neutral-900 border border-neutral-800 ${
+                className={`group relative overflow-hidden bg-[#2d2d2d] border border-[#4a4a4a] ${
                   idx === 0 ? "col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"
                 }`}
               >
@@ -403,19 +403,19 @@ export default function HomePage() {
             </div>
 
             {/* Location & Map Card (5 cols) */}
-            <div className="lg:col-span-5 bg-neutral-900 text-white p-6 sm:p-8 border border-neutral-800 space-y-6">
+            <div className="lg:col-span-5 bg-[#383838] text-white p-6 sm:p-8 border border-[#4a4a4a] space-y-6">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-neutral-400 block font-medium">
+                <span className="text-[10px] uppercase tracking-widest text-neutral-300 block font-medium">
                   Property Address
                 </span>
                 <h3 className="text-xl font-serif text-white mt-1">THE VINES ROOMS</h3>
-                <p className="text-xs text-neutral-300 mt-2 leading-relaxed">
+                <p className="text-xs text-neutral-200 mt-2 leading-relaxed">
                   {HOTEL_CONFIG.contact.address}
                 </p>
               </div>
 
               {/* Embedded Interactive Map */}
-              <div className="relative w-full aspect-[4/3] bg-neutral-800 overflow-hidden border border-neutral-700">
+              <div className="relative w-full aspect-[4/3] bg-[#2d2d2d] overflow-hidden border border-[#4a4a4a]">
                 <iframe
                   title="The Vines Rooms Location Map"
                   src={HOTEL_CONFIG.contact.googleMapsEmbed}
@@ -429,15 +429,15 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="space-y-3 pt-2 text-xs text-neutral-300">
-                <div className="flex items-center justify-between pb-2 border-b border-neutral-800">
-                  <span className="text-neutral-400">Primary Contact:</span>
+              <div className="space-y-3 pt-2 text-xs text-neutral-200">
+                <div className="flex items-center justify-between pb-2 border-b border-[#4a4a4a]">
+                  <span className="text-neutral-300">Primary Contact:</span>
                   <a href={`tel:${HOTEL_CONFIG.contact.primaryPhoneRaw}`} className="text-white hover:underline">
                     {HOTEL_CONFIG.contact.primaryPhone}
                   </a>
                 </div>
-                <div className="flex items-center justify-between pb-2 border-b border-neutral-800">
-                  <span className="text-neutral-400">Email:</span>
+                <div className="flex items-center justify-between pb-2 border-b border-[#4a4a4a]">
+                  <span className="text-neutral-300">Email:</span>
                   <a href={`mailto:${HOTEL_CONFIG.contact.email}`} className="text-white hover:underline">
                     {HOTEL_CONFIG.contact.email}
                   </a>
@@ -515,9 +515,9 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 9. FINAL CALL TO ACTION                                      */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24 bg-neutral-950 text-white relative overflow-hidden">
+      <section className="py-20 sm:py-24 bg-[#383838] text-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-neutral-400 font-medium block mb-3">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-neutral-300 font-medium block mb-3">
             Reserve Your Visit
           </span>
 
@@ -525,7 +525,7 @@ export default function HomePage() {
             Your Comfortable Stay Starts Here.
           </h2>
 
-          <p className="mt-4 text-xs sm:text-base text-neutral-300 max-w-xl mx-auto font-light leading-relaxed">
+          <p className="mt-4 text-xs sm:text-base text-neutral-200 max-w-xl mx-auto font-light leading-relaxed">
             Reach out through WhatsApp to check instant room availability, discuss custom check-in requirements, or
             secure your dates at The Vines Rooms.
           </p>
@@ -541,14 +541,14 @@ export default function HomePage() {
 
             <a
               href={`tel:${HOTEL_CONFIG.contact.primaryPhoneRaw}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-neutral-700 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-900 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-[#555555] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors"
             >
-              <Phone className="w-4 h-4 text-neutral-400" />
+              <Phone className="w-4 h-4 text-neutral-300" />
               <span>Call +91 79944 31227</span>
             </a>
           </div>
 
-          <div className="mt-8 text-[11px] text-neutral-500">
+          <div className="mt-8 text-[11px] text-neutral-400">
             Opp: 2nd Gate, Punarjani Gardens, Highway, Pazhayannur, Thiruvilwamala, Kerala 680588
           </div>
         </div>

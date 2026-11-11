@@ -15,8 +15,8 @@ export default function FloatingWhatsApp() {
     <div className="fixed bottom-6 right-6 z-40 flex items-end gap-3">
       {/* Popover Card */}
       {showTooltip && (
-        <div className="bg-neutral-900 text-white p-4 max-w-xs shadow-2xl border border-neutral-700 animate-in fade-in slide-in-from-bottom-2 duration-200">
-          <div className="flex items-center justify-between pb-2 border-b border-neutral-800 mb-2">
+        <div className="bg-[#383838] text-white p-4 max-w-xs shadow-2xl border border-[#4a4a4a] animate-in fade-in slide-in-from-bottom-2 duration-200">
+          <div className="flex items-center justify-between pb-2 border-b border-[#4a4a4a] mb-2">
             <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium flex items-center gap-1.5">
               <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
               <span>The Vines WhatsApp Desk</span>
@@ -73,7 +73,7 @@ export default function FloatingWhatsApp() {
 
         {/* Hover pill */}
         {!showTooltip && (
-          <div className="absolute right-16 top-1/2 -translate-y-1/2 hidden md:group-hover:flex items-center px-3 py-1.5 bg-neutral-900 text-white text-xs whitespace-nowrap shadow-lg border border-neutral-700 pointer-events-none rounded-none">
+          <div className="absolute right-16 top-1/2 -translate-y-1/2 hidden md:group-hover:flex items-center px-3 py-1.5 bg-[#383838] text-white text-xs whitespace-nowrap shadow-lg border border-[#4a4a4a] pointer-events-none rounded-none">
             <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] mr-1.5" />
             <span>Enquire on WhatsApp</span>
             <span className="ml-1.5 text-neutral-400 text-[10px]">· 24/7 Desk</span>

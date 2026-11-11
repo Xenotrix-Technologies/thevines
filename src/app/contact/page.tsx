@@ -111,7 +111,7 @@ export default function ContactPage() {
                   href={getGeneralWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-neutral-950 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-800 transition-colors shadow-xs group"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors shadow-xs group"
                 >
                   <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
                   <span>WhatsApp Desk</span>

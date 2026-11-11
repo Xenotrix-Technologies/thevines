@@ -128,7 +128,7 @@ export default function Navigation() {
                 className={`inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-widest font-medium transition-all group ${
                   isTransparent
                     ? "bg-white text-neutral-950 hover:bg-neutral-100"
-                    : "bg-neutral-950 text-white hover:bg-neutral-800"
+                    : "bg-[#383838] text-white hover:bg-[#484848]"
                 }`}
               >
                 <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] group-hover:scale-110 transition-transform" />
@@ -141,7 +141,7 @@ export default function Navigation() {
               <button
                 onClick={() => openBooking()}
                 className={`px-3 py-1.5 text-[10px] uppercase tracking-wider font-semibold ${
-                  isTransparent ? "bg-white text-neutral-900" : "bg-neutral-900 text-white"
+                  isTransparent ? "bg-white text-neutral-900" : "bg-[#383838] text-white"
                 }`}
               >
                 Book
@@ -210,7 +210,7 @@ export default function Navigation() {
                   setMobileMenuOpen(false);
                   openBooking();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 bg-neutral-950 text-white text-xs uppercase tracking-widest font-medium hover:bg-neutral-800 transition-colors group"
+                className="w-full flex items-center justify-center gap-2 py-3 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors group"
               >
                 <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
                 <span>WhatsApp Booking</span>

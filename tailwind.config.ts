@@ -15,6 +15,7 @@ const config: Config = {
           border: "#EAEAEA",
           subtle: "#D9D9D9",
           gray: "#999999",
+          charcoal: "#383838",
           darkgray: "#333333",
           deep: "#1A1A1A",
           black: "#0A0A0A",
