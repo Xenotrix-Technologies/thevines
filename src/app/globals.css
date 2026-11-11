@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F7F7F7;
+    --border-light: #EAEAEA;
+    --text-primary: #0A0A0A;
+    --text-muted: #666666;
+    --text-subtle: #999999;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+  }
+
+  ::selection {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F7F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* Editorial line-clamp and utility classes */
+.aspect-photo {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-editorial {
+  aspect-ratio: 16 / 10;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* Glass and subtle monochrome borders */
+.border-subtle {
+  border-color: #EAEAEA;
+}
+
+.subtle-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
+}
+
