@@ -75,13 +75,13 @@ export default function GalleryLightbox({
 
       {/* Main Image Container */}
       <div className="relative w-full h-full max-w-6xl max-h-[82vh] p-4 sm:p-8 flex items-center justify-center">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full rounded-[19px] overflow-hidden">
           <Image
             src={currentItem.image}
             alt={currentItem.alt || currentItem.title}
             fill
             sizes="(max-width: 1200px) 100vw, 1200px"
-            className="object-contain"
+            className="object-contain rounded-[19px]"
             priority
           />
         </div>

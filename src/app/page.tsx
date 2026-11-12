@@ -229,10 +229,10 @@ export default function HomePage() {
             {HOTEL_CONFIG.highlights.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-7 border border-neutral-200/80 shadow-xs hover-lift flex flex-col justify-between"
+                className="bg-white p-7 border border-neutral-200/80 rounded-[19px] overflow-hidden shadow-xs hover:shadow-md hover-lift transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 flex items-center justify-center bg-neutral-100 text-neutral-900 mb-5 border border-neutral-200">
+                  <div className="w-12 h-12 flex items-center justify-center bg-neutral-100 text-neutral-900 mb-5 border border-neutral-200 rounded-[12px]">
                     {getHighlightIcon(item.icon)}
                   </div>
                   <h3 className="text-base font-serif font-medium text-neutral-950 tracking-wide">
@@ -288,7 +288,7 @@ export default function HomePage() {
           </div>
 
           {/* Policy notes banner */}
-          <div className="mt-12 p-6 bg-neutral-50 border border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
+          <div className="mt-12 p-6 bg-neutral-50 border border-neutral-200 rounded-[19px] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
             <div className="flex items-center gap-4">
               <Clock className="w-5 h-5 text-neutral-900 flex-shrink-0" />
               <span>
@@ -319,14 +319,12 @@ export default function HomePage() {
           />
 
           {/* Grid of original photos */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {GALLERY_ITEMS.slice(0, 8).map((item, idx) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
+            {GALLERY_ITEMS.slice(0, 8).map((item) => (
               <Link
                 key={item.id}
                 href="/gallery"
-                className={`group relative overflow-hidden bg-[#2d2d2d] border border-[#4a4a4a] ${
-                  idx === 0 ? "col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"
-                }`}
+                className="group relative overflow-hidden bg-[#2d2d2d] border border-[#4a4a4a] rounded-[19px] aspect-[4/3] shadow-md hover:shadow-2xl hover:shadow-black/50 hover:-translate-y-1.5 transition-all duration-300"
               >
                 <Image
                   src={item.image}
@@ -376,10 +374,10 @@ export default function HomePage() {
               {NEARBY_ATTRACTIONS.map((att) => (
                 <div
                   key={att.id}
-                  className="p-5 bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition-colors flex flex-col justify-between"
+                  className="p-5 bg-neutral-50 border border-neutral-200 rounded-[19px] overflow-hidden hover:border-neutral-400 hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200 mb-3.5">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-[14px] bg-neutral-200 mb-3.5">
                       <Image
                         src={att.image}
                         alt={att.name}
@@ -403,7 +401,7 @@ export default function HomePage() {
             </div>
 
             {/* Location & Map Card (5 cols) */}
-            <div className="lg:col-span-5 bg-[#383838] text-white p-6 sm:p-8 border border-[#4a4a4a] space-y-6">
+            <div className="lg:col-span-5 bg-[#383838] text-white p-6 sm:p-8 border border-[#4a4a4a] rounded-[19px] overflow-hidden shadow-md space-y-6">
               <div>
                 <span className="text-[10px] uppercase tracking-widest text-neutral-300 block font-medium">
                   Property Address
@@ -415,7 +413,7 @@ export default function HomePage() {
               </div>
 
               {/* Embedded Interactive Map */}
-              <div className="relative w-full aspect-[4/3] bg-[#2d2d2d] overflow-hidden border border-[#4a4a4a]">
+              <div className="relative w-full aspect-[4/3] bg-[#2d2d2d] overflow-hidden rounded-[14px] border border-[#4a4a4a]">
                 <iframe
                   title="The Vines Rooms Location Map"
                   src={HOTEL_CONFIG.contact.googleMapsEmbed}
@@ -449,7 +447,7 @@ export default function HomePage() {
                   href={HOTEL_CONFIG.contact.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 py-3 bg-white text-neutral-950 text-xs uppercase tracking-widest font-semibold hover:bg-neutral-200 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 py-3 bg-white text-neutral-950 text-xs uppercase tracking-widest font-semibold hover:bg-neutral-200 transition-colors rounded-lg"
                 >
                   <span>Open in Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -475,7 +473,7 @@ export default function HomePage() {
             {REVIEWS.map((review) => (
               <div
                 key={review.id}
-                className="bg-white p-6 sm:p-8 border border-neutral-200 shadow-xs flex flex-col justify-between hover-lift"
+                className="bg-white p-6 sm:p-8 border border-neutral-200 rounded-[19px] overflow-hidden shadow-xs hover:shadow-md flex flex-col justify-between hover-lift transition-all duration-300"
               >
                 <div>
                   {/* Rating Stars */}

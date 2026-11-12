@@ -73,10 +73,10 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => openLightboxAtIndex(index)}
-              className="group relative bg-[#383838] border border-neutral-200 overflow-hidden cursor-pointer hover-lift"
+              className="group relative bg-[#383838] border border-neutral-200/90 rounded-[19px] overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:shadow-black/30 hover:-translate-y-1.5 transition-all duration-300"
             >
               {/* Image container */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[19px]">
                 <Image
                   src={item.image}
                   alt={item.alt || item.title}
@@ -89,12 +89,12 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-40 group-hover:opacity-80 transition-opacity" />
 
                 {/* Category tag */}
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 text-[10px] uppercase tracking-widest font-medium text-neutral-900 border border-neutral-200">
+                <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-xs px-2.5 py-1 text-[10px] uppercase tracking-widest font-medium text-neutral-900 border border-neutral-200 rounded-md">
                   {item.category}
                 </div>
 
                 {/* View Icon */}
-                <div className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-black/60 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-3.5 right-3.5 w-8 h-8 flex items-center justify-center bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                   <Maximize2 className="w-4 h-4" />
                 </div>
 

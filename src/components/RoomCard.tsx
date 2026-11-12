@@ -69,7 +69,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
     return (
       <div
         id={room.id}
-        className="scroll-mt-24 bg-white border border-neutral-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+        className="scroll-mt-24 bg-white border border-neutral-200 rounded-[19px] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
           {/* Main Room Photos Slider (7 cols) */}
@@ -212,7 +212,7 @@ export default function RoomCard({ room, layout = "grid" }: RoomCardProps) {
 
   // Grid layout (for Homepage Featured Rooms)
   return (
-    <article className="group bg-white border border-neutral-200 overflow-hidden flex flex-col justify-between hover-lift">
+    <article className="group bg-white border border-neutral-200 rounded-[19px] overflow-hidden flex flex-col justify-between hover-lift">
       {/* Room Image */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#383838]">
         <Image

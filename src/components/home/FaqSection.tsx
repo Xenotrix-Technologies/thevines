@@ -29,7 +29,7 @@ export default function FaqSection() {
             return (
               <div
                 key={faq.id}
-                className="border border-neutral-200 bg-neutral-50/50 transition-colors hover:border-neutral-400"
+                className="border border-neutral-200 bg-neutral-50/50 rounded-[19px] overflow-hidden transition-colors hover:border-neutral-400"
               >
                 <button
                   onClick={() => toggle(faq.id)}
@@ -39,7 +39,7 @@ export default function FaqSection() {
                   <span className="text-sm sm:text-base font-serif text-neutral-900 font-medium">
                     {faq.question}
                   </span>
-                  <span className="w-8 h-8 flex items-center justify-center bg-white border border-neutral-200 text-neutral-700 rounded-none flex-shrink-0 transition-transform">
+                  <span className="w-8 h-8 flex items-center justify-center bg-white border border-neutral-200 text-neutral-700 rounded-full flex-shrink-0 transition-transform">
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </span>
                 </button>
@@ -55,7 +55,7 @@ export default function FaqSection() {
         </div>
 
         {/* WhatsApp Help Note */}
-        <div className="mt-10 p-6 bg-neutral-50 border border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-10 p-6 bg-neutral-50 border border-neutral-200 rounded-[19px] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <h4 className="text-sm font-serif font-medium text-neutral-900">
               Have a special request or unlisted question?
@@ -68,7 +68,7 @@ export default function FaqSection() {
             href={getGeneralWhatsAppUrl("I have a quick query before reserving a room.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors whitespace-nowrap group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#383838] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#484848] transition-colors whitespace-nowrap group rounded-lg"
           >
             <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] group-hover:scale-110 transition-transform" />
             <span>Ask on WhatsApp</span>
