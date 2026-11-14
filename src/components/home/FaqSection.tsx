@@ -8,10 +8,13 @@ import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { getGeneralWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function FaqSection() {
-  const [openId, setOpenId] = useState<string | null>("faq-1");
+  // Allow multiple FAQs to be toggled open simultaneously, defaulting to first FAQ open
+  const [openIds, setOpenIds] = useState<string[]>(["faq-1"]);
 
   const toggle = (id: string) => {
-    setOpenId((prev) => (prev === id ? null : id));
+    setOpenIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -25,27 +28,40 @@ export default function FaqSection() {
 
         <div className="space-y-3">
           {FAQS.map((faq) => {
-            const isOpen = openId === faq.id;
+            const isOpen = openIds.includes(faq.id);
             return (
               <div
                 key={faq.id}
-                className="border border-neutral-200 bg-neutral-50/50 rounded-[19px] overflow-hidden transition-colors hover:border-neutral-400"
+                className={`border rounded-[19px] overflow-hidden transition-all duration-200 ${
+                  isOpen
+                    ? "border-neutral-400 bg-white shadow-xs"
+                    : "border-neutral-200 bg-neutral-50/50 hover:border-neutral-300"
+                }`}
               >
                 <button
+                  type="button"
                   onClick={() => toggle(faq.id)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer select-none group"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-serif text-neutral-900 font-medium">
+                  <span className="text-sm sm:text-base font-serif text-neutral-900 font-medium group-hover:text-neutral-700 transition-colors">
                     {faq.question}
                   </span>
-                  <span className="w-8 h-8 flex items-center justify-center bg-white border border-neutral-200 text-neutral-700 rounded-full flex-shrink-0 transition-transform">
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  <span
+                    className={`w-8 h-8 flex items-center justify-center bg-white border border-neutral-200 text-neutral-700 rounded-full flex-shrink-0 transition-all duration-200 group-hover:border-neutral-400 group-hover:bg-neutral-50 ${
+                      isOpen ? "bg-neutral-900 text-white border-neutral-900" : ""
+                    }`}
+                  >
+                    {isOpen ? (
+                      <Minus className="w-4 h-4 pointer-events-none" />
+                    ) : (
+                      <Plus className="w-4 h-4 pointer-events-none" />
+                    )}
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 bg-white">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 bg-white animate-in fade-in duration-200">
                     <p>{faq.answer}</p>
                   </div>
                 )}
