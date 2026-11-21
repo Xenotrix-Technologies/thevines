@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { HOTEL_CONFIG } from "@/data/hotelData";
 import { Phone, Mail, MapPin, Clock, ExternalLink, ArrowUpRight } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
@@ -47,14 +48,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Intro */}
           <div className="space-y-4">
-            <div>
-              <span className="font-serif tracking-widest text-2xl font-semibold uppercase text-white block">
-                THE VINES
-              </span>
-              <span className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 block -mt-0.5">
-                ROOMS · THIRUVILWAMALA
-              </span>
-            </div>
+            <Link href="/" className="inline-flex items-center gap-3.5 group">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden bg-black border border-neutral-800 flex-shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt="THE VINES ROOMS Official Logo"
+                  fill
+                  sizes="56px"
+                  className="object-contain p-0.5 group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div>
+                <span className="font-serif tracking-widest text-2xl font-semibold uppercase text-white block group-hover:text-neutral-200 transition-colors">
+                  THE VINES
+                </span>
+                <span className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 block -mt-0.5">
+                  ROOMS · THIRUVILWAMALA
+                </span>
+              </div>
+            </Link>
             <p className="text-xs text-neutral-400 leading-relaxed">
               A serene and private accommodation in Thiruvilwamala, Kerala. Designed to provide a comfortable,
               homely experience with air-conditioned rooms, modern amenities, and genuine Kerala hospitality.
