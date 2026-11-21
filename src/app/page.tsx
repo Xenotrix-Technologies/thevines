@@ -371,37 +371,48 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Attractions List (7 cols) */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {NEARBY_ATTRACTIONS.map((att) => (
-                <div
-                  key={att.id}
-                  className="p-5 bg-neutral-50 border border-neutral-200 rounded-[19px] overflow-hidden hover:border-neutral-400 hover:shadow-md transition-all flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-[14px] bg-neutral-200 mb-3.5">
-                      <Image
-                        src={att.image}
-                        alt={att.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 30vw"
-                        className="object-cover"
-                      />
+              {NEARBY_ATTRACTIONS.map((att, index) => {
+                const isFeatured = index === 0 && NEARBY_ATTRACTIONS.length % 2 !== 0;
+                return (
+                  <div
+                    key={att.id}
+                    className={`p-5 bg-neutral-50 border border-neutral-200 rounded-[19px] overflow-hidden hover:border-neutral-400 hover:shadow-md transition-all flex flex-col justify-between ${
+                      isFeatured ? "sm:col-span-2" : ""
+                    }`}
+                  >
+                    <div className={isFeatured ? "sm:flex sm:gap-5 sm:items-center" : ""}>
+                      <div
+                        className={`relative aspect-[16/10] overflow-hidden rounded-[14px] bg-neutral-200 ${
+                          isFeatured ? "sm:w-1/2 sm:shrink-0 sm:mb-0 mb-3.5" : "mb-3.5"
+                        }`}
+                      >
+                        <Image
+                          src={att.image}
+                          alt={att.name}
+                          fill
+                          sizes={isFeatured ? "(max-width: 768px) 100vw, 40vw" : "(max-width: 768px) 100vw, 30vw"}
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className={isFeatured ? "sm:flex-1" : ""}>
+                        <span className="text-[10px] uppercase tracking-wider text-neutral-500 font-semibold block">
+                          {att.distanceOrType}
+                        </span>
+                        <h3 className="text-sm font-serif font-medium text-neutral-900 mt-1">
+                          {att.name}
+                        </h3>
+                        <p className="text-xs text-neutral-600 mt-1.5 leading-relaxed">
+                          {att.description}
+                        </p>
+                      </div>
                     </div>
-                    <span className="text-[10px] uppercase tracking-wider text-neutral-500 font-semibold block">
-                      {att.distanceOrType}
-                    </span>
-                    <h3 className="text-sm font-serif font-medium text-neutral-900 mt-1">
-                      {att.name}
-                    </h3>
-                    <p className="text-xs text-neutral-600 mt-1.5 leading-relaxed">
-                      {att.description}
-                    </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Location & Map Card (5 cols) */}
-            <div className="lg:col-span-5 bg-[#383838] text-white p-6 sm:p-8 border border-[#4a4a4a] rounded-[19px] overflow-hidden shadow-md space-y-6">
+            <div className="lg:col-span-5 bg-[#383838] text-white p-6 sm:p-8 border border-[#4a4a4a] rounded-[19px] overflow-hidden shadow-md space-y-6 lg:sticky lg:top-28">
               <div>
                 <span className="text-[10px] uppercase tracking-widest text-neutral-300 block font-medium">
                   Property Address
