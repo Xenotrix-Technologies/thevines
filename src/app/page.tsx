@@ -70,7 +70,7 @@ export default function HomePage() {
         {/* Immersive background photograph with parallax feel */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/01JR0Z520PTM0FF5TE72P145EV.jpg"
+            src="/images/rooms/01JR0Z520PTM0FF5TE72P145EV.jpg"
             alt="THE VINES ROOMS Property Exterior and Front Driveway"
             fill
             sizes="100vw"
@@ -153,7 +153,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/3] w-full bg-neutral-100 overflow-hidden border border-neutral-200 shadow-md">
                 <Image
-                  src="/images/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
+                  src="/images/rooms/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
                   alt="The Vines Rooms Courtyard and Garden Path"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -164,7 +164,7 @@ export default function HomePage() {
               {/* Inset Secondary Image */}
               <div className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-[4/3] bg-neutral-200 border-4 border-white shadow-xl overflow-hidden">
                 <Image
-                  src="/images/01JQDD9YE366SE95M9DB6RJBZH.jpeg"
+                  src="/images/rooms/01JQDD9YE366SE95M9DB6RJBZH.jpeg"
                   alt="The Vines Rooms Architecture and Green Surroundings"
                   fill
                   sizes="25vw"
@@ -189,7 +189,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                Whether you are visiting for spiritual darshan at the revered Sree Vilwadrinatha Temple, exploring the
+                Whether you are visiting for spiritual darshan at the revered Pambady Ivormadom Krishna Temple, exploring the
                 famous Kuthampully Handloom Village, attending a family gathering, or enjoying a quiet getaway, our
                 property is equipped with air conditioning, high-speed Wi-Fi, 24-hour security, and attentive service
                 to make your visit effortless.

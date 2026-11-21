@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Punarjani Gardens Rooms",
     "Pazhayannur Hotels",
     "Thiruvilwamala Temple Accommodation",
-    "Rooms near Sree Vilwadrinatha Temple",
+    "Rooms near Pambady Ivormadom Temple",
     "Kuthampully Handloom Stay",
     "Kerala Boutique Hotel",
     "WhatsApp Hotel Booking Kerala",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "THE VINES ROOMS",
     images: [
       {
-        url: "/images/01JR0Z520PTM0FF5TE72P145EV.jpg",
+        url: "/images/rooms/01JR0Z520PTM0FF5TE72P145EV.jpg",
         width: 1200,
         height: 800,
         alt: "THE VINES ROOMS Property Facade and Entrance",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "THE VINES ROOMS | Premium Hotel in Thiruvilwamala, Kerala",
     description: "A calm stay, a better experience near Punarjani Gardens. Enquire via WhatsApp.",
-    images: ["/images/01JR0Z520PTM0FF5TE72P145EV.jpg"],
+    images: ["/images/rooms/01JR0Z520PTM0FF5TE72P145EV.jpg"],
   },
   robots: {
     index: true,
@@ -93,7 +93,7 @@ export default function RootLayout({
         "url": "https://thevinesrooms.com/",
         "description":
           "The Vines Rooms offers a peaceful and comfortable retreat in the heart of Kerala, located at Thiruvilwamala, near Punarjani Gardens. Featuring Standard Double, Premium, and Executive Rooms with modern amenities.",
-        "image": "/images/01JR0Z520PTM0FF5TE72P145EV.jpg",
+        "image": "/images/rooms/01JR0Z520PTM0FF5TE72P145EV.jpg",
         "telephone": HOTEL_CONFIG.contact.primaryPhone,
         "email": HOTEL_CONFIG.contact.email,
         "address": {

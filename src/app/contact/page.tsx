@@ -177,7 +177,7 @@ export default function ContactPage() {
                   Railway Junction (~24 km). Regular auto-rickshaws and taxis are readily accessible.
                 </li>
                 <li>
-                  • <strong>Nearby Landmarks:</strong> Thiruvilwamala Sree Vilwadrinatha Temple (7 min), Kuthampully
+                  • <strong>Nearby Landmarks:</strong> Pambady Ivormadom Sree Krishna Temple (9 min), Kuthampully
                   Handloom Village (12 min).
                 </li>
               </ul>

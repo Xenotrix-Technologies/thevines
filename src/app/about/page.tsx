@@ -38,7 +38,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6 space-y-6">
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#383838] border border-neutral-200 shadow-sm">
               <Image
-                src="/images/01JR0Z520PTM0FF5TE72P145EV.jpg"
+                src="/images/rooms/01JR0Z520PTM0FF5TE72P145EV.jpg"
                 alt="The Vines Rooms Property Exterior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 border border-neutral-200">
                 <Image
-                  src="/images/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
+                  src="/images/rooms/01JQDD89CKAFP6D3JZSNDECK4A.jpeg"
                   alt="Courtyard and walkway at The Vines Rooms"
                   fill
                   sizes="25vw"
@@ -59,7 +59,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 border border-neutral-200">
                 <Image
-                  src="/images/01JR1015ZE6JG3WWQJQEXNBC3H.jpg"
+                  src="/images/rooms/01JR1015ZE6JG3WWQJQEXNBC3H.jpg"
                   alt="Dine-in area at The Vines Rooms"
                   fill
                   sizes="25vw"
@@ -223,7 +223,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-6 relative aspect-[4/3] bg-[#383838] border border-neutral-200 overflow-hidden shadow-sm">
             <Image
-              src="/images/01JR101HHBKAECA24EJTZA1XYW.jpg"
+              src="/images/rooms/01JR101HHBKAECA24EJTZA1XYW.jpg"
               alt="Dining atmosphere and common lounge at The Vines Rooms"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -41,7 +41,7 @@ The website features five dedicated pages:
    - 8 Hotel Highlights with custom icons (Air-conditioned Rooms, Free Wi-Fi, 24-Hour Security, Power Backup, Housekeeping, Free Parking, Dine-in Facility, Travel Amenities).
    - Featured Rooms showcase with capacity, inclusions, and direct booking triggers.
    - Curated gallery teaser.
-   - Surrounding attractions guide (Punarjani Gardens, Sree Vilwadrinatha Temple, Ivormadom Krishna Temple, Kunchan Nambiar Smarakam, Cheerakuzhy Dam, Kuthampully Handloom Village, Chulanur Peafowl Sanctuary, Varikkasseri Mana).
+   - Surrounding attractions guide (Punarjani Gardens, Ivormadom Krishna Temple, Kunchan Nambiar Smarakam, Cheerakuzhy Dam, Kuthampully Handloom Village, Chulanur Peafowl Sanctuary, Varikkasseri Mana).
    - Verified guest testimonials with star ratings.
    - High-contrast final call to action.
 
