@@ -4,20 +4,34 @@ const sharp = require(path.join(process.cwd(), "node_modules", "sharp"));
 
 const IMAGES_DIR = path.join(process.cwd(), "public", "images");
 
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach(function (file) {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
+    } else {
+      arrayOfFiles.push(fullPath);
+    }
+  });
+
+  return arrayOfFiles;
+}
+
 async function optimizeImages() {
   console.log("Analyzing and optimizing images in:", IMAGES_DIR);
 
-  const files = fs.readdirSync(IMAGES_DIR);
+  const filePaths = getAllFiles(IMAGES_DIR);
   let totalSavedBytes = 0;
   let count = 0;
 
-  for (const file of files) {
-    const ext = path.extname(file).toLowerCase();
+  for (const filePath of filePaths) {
+    const file = path.relative(IMAGES_DIR, filePath);
+    const ext = path.extname(filePath).toLowerCase();
     if (![".jpg", ".jpeg", ".png", ".webp"].includes(ext)) {
       continue;
     }
-
-    const filePath = path.join(IMAGES_DIR, file);
     const stats = fs.statSync(filePath);
     const originalSize = stats.size;
 
